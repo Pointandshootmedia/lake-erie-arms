@@ -262,6 +262,12 @@ a:hover {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-video-wrap.is-playing iframe.hero-video {
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -287,6 +293,36 @@ a:hover {
   max-width: 720px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm);
+  transition: color 0.2s ease, transform 0.2s ease;
+  animation: hero-scroll-bounce 2s ease-in-out infinite;
+}
+
+.hero-scroll-indicator:hover {
+  color: #fff;
+}
+
+.hero-scroll-indicator svg {
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes hero-scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
 }
 
 .hero-title {
@@ -1537,6 +1573,47 @@ a:hover {
 .range-intro-bg {
   padding: var(--space-xl) var(--space-md);
   margin-bottom: var(--space-xl);
+}
+
+.lul-intro-bg {
+  background-image: url(images/lul-load.jpeg);
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: calc(-1 * var(--space-xl));
+  margin-left: calc(-1 * var(--space-md));
+  margin-right: calc(-1 * var(--space-md));
+  margin-bottom: var(--space-md);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+}
+
+.lul-intro-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.lul-intro-bg .range-intro {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.lul-intro-bg .range-intro-subtitle,
+.lul-intro-bg .range-intro-body,
+.lul-intro-bg .range-intro-date {
+  color: #fff;
+}
+
+.lul-intro-bg .range-intro-date strong {
+  color: var(--color-accent);
 }
 
 .range-intro {

@@ -1,13 +1,48 @@
 (function () {
   'use strict';
 
-  // Hero: loader image shows, then fades out after 2s
-  document.querySelectorAll('.hero-video-wrap').forEach(function (wrap) {
-    if (!wrap.querySelector('.hero-loading-image')) return;
-    setTimeout(function () {
-      wrap.classList.add('loading-faded');
-    }, 1250);
-  });
+  // Hero: hide video until playing, then seek to 0 and reveal so it starts from the beginning
+  var heroIframes = document.querySelectorAll('.hero-video-wrap iframe.hero-video');
+  if (heroIframes.length) {
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(tag, firstScript);
+
+    window.onYouTubeIframeAPIReady = function () {
+      heroIframes.forEach(function (iframe) {
+        var wrap = iframe.closest('.hero-video-wrap');
+        if (!wrap) return;
+        var player = null;
+        var revealed = false;
+        var reveal = function () {
+          if (revealed) return;
+          revealed = true;
+          if (player && typeof player.seekTo === 'function') {
+            player.seekTo(0);
+          }
+          wrap.classList.add('is-playing');
+          setTimeout(function () {
+            wrap.classList.add('loading-faded');
+          }, 400);
+        };
+        try {
+          player = new YT.Player(iframe, {
+            events: {
+              onStateChange: function (e) {
+                if (e.data === YT.PlayerState.PLAYING) {
+                  reveal();
+                }
+              }
+            }
+          });
+        } catch (err) {
+          reveal();
+        }
+        setTimeout(reveal, 8000);
+      });
+    };
+  }
 
   var navToggle = document.querySelector('.nav-toggle');
   var navLinks = document.querySelector('.nav-links');
