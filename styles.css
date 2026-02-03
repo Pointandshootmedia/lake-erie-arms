@@ -246,6 +246,13 @@ a:hover {
   min-width: 177.77vh; /* 16:9 aspect ratio */
   transform: translate(-50%, -50%);
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Reveal video only when playing (hides YouTube loading icon) */
+.hero-video-wrap.is-playing iframe.hero-video {
+  opacity: 1;
 }
 
 .hero-overlay {

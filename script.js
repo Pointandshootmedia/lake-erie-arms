@@ -1,6 +1,38 @@
 (function () {
   'use strict';
 
+  // Hero: hide YouTube iframe until video is playing (removes loading icon)
+  var heroIframes = document.querySelectorAll('.hero-video-wrap iframe.hero-video');
+  if (heroIframes.length) {
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(tag, firstScript);
+
+    window.onYouTubeIframeAPIReady = function () {
+      heroIframes.forEach(function (iframe) {
+        var wrap = iframe.closest('.hero-video-wrap');
+        if (!wrap) return;
+        try {
+          var player = new YT.Player(iframe, {
+            events: {
+              onStateChange: function (e) {
+                if (e.data === YT.PlayerState.PLAYING) {
+                  wrap.classList.add('is-playing');
+                }
+              }
+            }
+          });
+        } catch (err) {
+          wrap.classList.add('is-playing');
+        }
+        setTimeout(function () {
+          wrap.classList.add('is-playing');
+        }, 8000);
+      });
+    };
+  }
+
   var navToggle = document.querySelector('.nav-toggle');
   var navLinks = document.querySelector('.nav-links');
   var navItemsWithDropdown = document.querySelectorAll('.nav-item.has-dropdown');
