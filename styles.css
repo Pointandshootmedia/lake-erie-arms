@@ -1421,6 +1421,24 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.range-section.clay-bg-section .range-content,
+.range-section.clay-bg-section .range-section-content {
+  color: #fff;
+}
+
+.range-section.clay-bg-section .range-content h2,
+.range-section.clay-bg-section .range-content p,
+.range-section.clay-bg-section .range-section-content .range-title,
+.range-section.clay-bg-section .range-section-content .range-body,
+.range-section.clay-bg-section .range-section-content .range-body em {
+  color: #fff;
+}
+
+.range-section.clay-bg-section .range-content .range-subtitle,
+.range-section.clay-bg-section .range-section-content .range-pricing {
+  color: var(--color-accent);
+}
+
 .clay-ammo-note {
   margin-top: var(--space-sm);
 }

@@ -6,7 +6,7 @@
     if (!wrap.querySelector('.hero-loading-image')) return;
     setTimeout(function () {
       wrap.classList.add('loading-faded');
-    }, 2000);
+    }, 1250);
   });
 
   var navToggle = document.querySelector('.nav-toggle');
