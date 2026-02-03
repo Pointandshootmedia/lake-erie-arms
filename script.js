@@ -22,9 +22,7 @@
             player.seekTo(0);
           }
           wrap.classList.add('is-playing');
-          setTimeout(function () {
-            wrap.classList.add('loading-faded');
-          }, 400);
+          wrap.classList.add('loading-faded');
         };
         try {
           player = new YT.Player(iframe, {
@@ -39,7 +37,7 @@
         } catch (err) {
           reveal();
         }
-        setTimeout(reveal, 8000);
+        setTimeout(reveal, 2000);
       });
     };
   }
