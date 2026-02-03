@@ -263,7 +263,6 @@ a:hover {
   pointer-events: none;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.4s ease;
 }
 
 .hero-video-wrap.is-playing iframe.hero-video {
