@@ -1,43 +1,46 @@
 (function () {
   'use strict';
 
-  // Hero: hide video until playing, then seek to 0 and reveal so it starts from the beginning
+  // Hero: hide video until playing, then seek to 0 and reveal. Loader never stays more than 2s (timer starts at page load).
   var heroIframes = document.querySelectorAll('.hero-video-wrap iframe.hero-video');
+  var heroStates = [];
   if (heroIframes.length) {
+    heroIframes.forEach(function (iframe) {
+      var wrap = iframe.closest('.hero-video-wrap');
+      if (!wrap) return;
+      var state = { revealed: false, playerRef: [] };
+      var reveal = function () {
+        if (state.revealed) return;
+        state.revealed = true;
+        if (state.playerRef[0] && typeof state.playerRef[0].seekTo === 'function') {
+          state.playerRef[0].seekTo(0);
+        }
+        wrap.classList.add('is-playing');
+        wrap.classList.add('loading-faded');
+      };
+      heroStates.push({ iframe: iframe, state: state, reveal: reveal });
+      setTimeout(reveal, 2000);
+    });
     var tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     var firstScript = document.getElementsByTagName('script')[0];
     firstScript.parentNode.insertBefore(tag, firstScript);
-
     window.onYouTubeIframeAPIReady = function () {
-      heroIframes.forEach(function (iframe) {
-        var wrap = iframe.closest('.hero-video-wrap');
-        if (!wrap) return;
-        var player = null;
-        var revealed = false;
-        var reveal = function () {
-          if (revealed) return;
-          revealed = true;
-          if (player && typeof player.seekTo === 'function') {
-            player.seekTo(0);
-          }
-          wrap.classList.add('is-playing');
-          wrap.classList.add('loading-faded');
-        };
+      heroStates.forEach(function (item) {
         try {
-          player = new YT.Player(iframe, {
+          var player = new YT.Player(item.iframe, {
             events: {
               onStateChange: function (e) {
                 if (e.data === YT.PlayerState.PLAYING) {
-                  reveal();
+                  item.reveal();
                 }
               }
             }
           });
+          item.state.playerRef[0] = player;
         } catch (err) {
-          reveal();
+          item.reveal();
         }
-        setTimeout(reveal, 2000);
       });
     };
   }
