@@ -213,11 +213,11 @@ a:hover {
   background-position: center;
 }
 
-/* Hero loading images: separate layer so they can fade out after 2s */
+/* Hero loading images: sit on top of iframe until video has painted */
 .hero-loading-image {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 2;
   background-size: cover;
   background-position: center;
   opacity: 1;
@@ -261,14 +261,7 @@ a:hover {
   min-width: 177.77vh; /* 16:9 aspect ratio */
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
   z-index: 1;
-}
-
-/* Reveal video only when playing (hides YouTube loading icon) */
-.hero-video-wrap.is-playing iframe.hero-video {
-  opacity: 1;
 }
 
 .hero-overlay {

@@ -1,39 +1,7 @@
 (function () {
   'use strict';
 
-  // Hero: hide YouTube iframe until video is playing (removes loading icon)
-  var heroIframes = document.querySelectorAll('.hero-video-wrap iframe.hero-video');
-  if (heroIframes.length) {
-    var tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    var firstScript = document.getElementsByTagName('script')[0];
-    firstScript.parentNode.insertBefore(tag, firstScript);
-
-    window.onYouTubeIframeAPIReady = function () {
-      heroIframes.forEach(function (iframe) {
-        var wrap = iframe.closest('.hero-video-wrap');
-        if (!wrap) return;
-        try {
-          var player = new YT.Player(iframe, {
-            events: {
-              onStateChange: function (e) {
-                if (e.data === YT.PlayerState.PLAYING) {
-                  wrap.classList.add('is-playing');
-                }
-              }
-            }
-          });
-        } catch (err) {
-          wrap.classList.add('is-playing');
-        }
-        setTimeout(function () {
-          wrap.classList.add('is-playing');
-        }, 8000);
-      });
-    };
-  }
-
-  // Hero loading image: show 2s then fade out
+  // Hero: loader image shows, then fades out after 2s
   document.querySelectorAll('.hero-video-wrap').forEach(function (wrap) {
     if (!wrap.querySelector('.hero-loading-image')) return;
     setTimeout(function () {
