@@ -208,6 +208,22 @@ a:hover {
   position: absolute;
   inset: 0;
   z-index: 0;
+  background: var(--color-bg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Hero loading images: show until video paints */
+.hero-home .hero-video-wrap {
+  background-image: url(images/hero-load.jpg);
+}
+
+.hero.lul-hero .hero-video-wrap {
+  background-image: url(images/lul-load.jpeg);
+}
+
+.hero.hero-clay .hero-video-wrap {
+  background-image: url(images/clay-load.jpg);
 }
 
 .hero-video {
