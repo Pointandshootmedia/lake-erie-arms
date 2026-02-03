@@ -33,6 +33,14 @@
     };
   }
 
+  // Hero loading image: show 2s then fade out
+  document.querySelectorAll('.hero-video-wrap').forEach(function (wrap) {
+    if (!wrap.querySelector('.hero-loading-image')) return;
+    setTimeout(function () {
+      wrap.classList.add('loading-faded');
+    }, 2000);
+  });
+
   var navToggle = document.querySelector('.nav-toggle');
   var navLinks = document.querySelector('.nav-links');
   var navItemsWithDropdown = document.querySelectorAll('.nav-item.has-dropdown');

@@ -213,16 +213,31 @@ a:hover {
   background-position: center;
 }
 
-/* Hero loading images: show until video paints */
-.hero-home .hero-video-wrap {
+/* Hero loading images: separate layer so they can fade out after 2s */
+.hero-loading-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.hero-video-wrap.loading-faded .hero-loading-image {
+  opacity: 0;
+}
+
+.hero-home .hero-loading-image {
   background-image: url(images/hero-load.jpg);
 }
 
-.hero.lul-hero .hero-video-wrap {
+.hero.lul-hero .hero-loading-image {
   background-image: url(images/lul-load.jpeg);
 }
 
-.hero.hero-clay .hero-video-wrap {
+.hero.hero-clay .hero-loading-image {
   background-image: url(images/clay-load.jpg);
 }
 
@@ -248,6 +263,7 @@ a:hover {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
+  z-index: 1;
 }
 
 /* Reveal video only when playing (hides YouTube loading icon) */
