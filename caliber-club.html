@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>25 & 100 Yard — Lake Erie Arms | Indoor Shooting Complex</title>
+  <title>Caliber Club — Lake Erie Arms | Indoor Shooting Complex</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="caliberclub-page">
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" class="logo">
@@ -98,63 +99,94 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <h1 class="page-hero-title">indoor shooting ranges</h1>
+  <main class="page-caliberclub">
+    <section class="page-hero caliberclub-hero">
+      <div class="container caliberclub-hero-inner">
+        <img src="images/CC-Full-Logo-White-Gold.png" alt="Caliber Club" class="caliberclub-hero-text">
+        <p class="caliberclub-hero-intro">The Caliber Club is a serene and exclusive space designed for members to relax, dine, and enjoy. Our club is a haven for those who appreciate a refined atmosphere coupled with culinary excellence.</p>
+        <div class="rules-buttons caliber-club-menus caliberclub-hero-menus">
+          <a href="drinks.html" class="btn-hero">Drink Menu</a>
+          <a href="documents/New+CC+Lunch+Menu.pdf" class="btn-hero" target="_blank" rel="noopener noreferrer">Lunch Menu</a>
+          <a href="documents/CC-Dinner-Menu+5.29.25.pdf" class="btn-hero" target="_blank" rel="noopener noreferrer">Dinner Menu</a>
+          <a href="documents/CC+Brunch+Menu.pdf" class="btn-hero btn-hero-outline" target="_blank" rel="noopener noreferrer">Sunday Brunch</a>
+        </div>
+      </div>
+      <a href="#caliberclub-content" class="hero-scroll-indicator" aria-label="Scroll to content">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <section id="caliberclub-content" class="range-section range-section-alt">
+      <div class="container caliberclub-hours-split">
+        <div class="rules-content">
+          <h2 class="rules-section-title"><strong>Caliber Club Hours</strong></h2>
+          <div class="cc-hours">
+            <div class="cc-hours-block">
+              <div class="cc-hours-row">
+                <span class="cc-hours-days">Mon – Thu</span>
+                <span class="cc-hours-time">11am – 9pm</span>
+              </div>
+              <p class="cc-hours-note">Kitchen closes 8pm</p>
+            </div>
+            <div class="cc-hours-block">
+              <div class="cc-hours-row">
+                <span class="cc-hours-days">Fri – Sat</span>
+                <span class="cc-hours-time">11am – 10pm</span>
+              </div>
+              <p class="cc-hours-note">Kitchen closes 9pm</p>
+            </div>
+            <div class="cc-hours-block">
+              <div class="cc-hours-row">
+                <span class="cc-hours-days">Sun</span>
+                <span class="cc-hours-time">10am – 8pm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="caliberclub-hours-image-wrap">
+          <img src="images/Food/_LEA6808-2.webp" alt="Caliber Club at Lake Erie Arms" class="range-section-image">
+        </div>
       </div>
     </section>
 
     <section class="range-section">
-      <div class="container range-section-split">
-        <div class="range-section-image-wrap">
-          <img src="images/25-yard-page.webp" alt="Lake Erie Arms 25 Yard Shooting Lanes" class="range-section-image">
-        </div>
-        <div class="range-section-content">
-          <h2 class="range-title">25-YARD RANGE</h2>
-          <p class="range-pricing">(MON–THUR): $29.99/HR<br><span class="range-pricing-add">ADD SHOOTER $14.99</span><br>(FRI–SUN): $34.99/HR<br><span class="range-pricing-add">ADD SHOOTER $14.99</span></p>
-          <p class="range-body">Featuring 16 lanes of interactive shooting using Action Target's multi-scenario target retrievers giving shooters endless training possibilities. This is next level training and shooting!</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="range-section range-section-alt">
-      <div class="container range-section-split">
-        <div class="range-section-image-wrap">
-          <img src="images/100-yard-range.webp" alt="Lake Erie Arms 100 Yard shooting range" class="range-section-image">
-        </div>
-        <div class="range-section-content">
-          <h2 class="range-title">100-YARD RANGE</h2>
-          <p class="range-pricing">(SUN–SAT): $39.99/HR<br><span class="range-pricing-add">ADD SHOOTER $19.99</span></p>
-          <p class="range-body">Featuring 4 lanes equipped with a target retrieval system that will make spotting your shot a breeze, thanks to the integrated target camera providing a real-time view of every shot!</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="range-section">
-      <div class="container range-section-rentals">
-        <div class="range-section-content">
-          <h2 class="range-title">Gun Rentals</h2>
-          <p class="range-pricing">HANDGUN RENTAL: $15<br>LONG GUN RENTAL: $20<br>FULL AUTO: $50 +AMMO</p>
-          <p class="range-body">Loaner guns must use Lake Erie Arms ammunition. Ask staff for availability.</p>
-        </div>
-        <div class="range-section-rentals-images">
-          <div class="range-section-image-wrap rentals-image-wrap">
-            <img src="images/gun-rental-1.webp" alt="Gun rental at Lake Erie Arms" class="range-section-image">
-          </div>
-          <div class="range-section-image-wrap rentals-image-wrap">
-            <img src="images/gun-rental-2.webp" alt="Gun rental at Lake Erie Arms" class="range-section-image">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section page-cta-strip" style="background-image: url('images/waiver-rules-bg.webp'); background-size: 200%; background-position: center center; background-repeat: no-repeat;">
       <div class="container">
-        <h2 class="cta-title">SIGN YOUR WAIVER ONLINE</h2>
-        <a href="online-range-waiver.html" class="btn-cta">Waiver</a>
-        <h2 class="cta-title cta-title-spaced">VIEW OUR RANGE RULES</h2>
-        <a href="range-rules.html" class="btn-cta">Range Rules</a>
+        <h2 class="rules-section-title">Gallery</h2>
+        <div class="caliberclub-gallery">
+          <img src="images/Food/_LEA6690.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/_LEA7729-Enhanced-NR-5.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20231031-_LEA9601.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240126-_LEA2820.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240201-_LEA2893.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240208-_LEA2921.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240208-_LEA2935.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240229-_LEA3083.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240229-_LEA3109.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240229-_LEA3122.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240307-_LEA3137.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240314-_LEA3157.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240321-_LEA3202.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240321-_LEA3203.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240329-_LEA3249.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240412-_LEA0012.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240412-_LEA0021.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240418-_LEA0129.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240516-_LEA0715.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/20240516-_LEA0716.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/AHI-TUNA.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/BOURBON.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/BURGER-NIGHT.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/ELK-LOIN-CHOPS.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/FILET-MINON.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/Hot-Brown.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/MEATLOAF.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/ROASTED-DUCK.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/SearedScallops.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/Shrimp-n-Grits.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/SLIDERS.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/STEAK.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+          <img src="images/Food/WagyuBurger.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+        </div>
       </div>
     </section>
 
@@ -224,6 +256,7 @@
             <a href="training.html">Training</a>
             <a href="classes.html">Classes</a>
             <a href="custom-shop.html">Custom Shop</a>
+            <a href="caliber-club.html">Caliber Club</a>
             <a href="book-an-event.html">Host An Event</a>
             <a href="#">Careers</a>
             <a href="#">Memberships</a>

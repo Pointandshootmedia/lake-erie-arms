@@ -104,4 +104,57 @@
       });
     });
   }
+
+  // Events page: click event card image to expand in lightbox
+  var eventLightbox = document.getElementById('event-lightbox');
+  var eventImageWraps = document.querySelectorAll('.page-events .event-card-image-wrap');
+  if (eventLightbox && eventImageWraps.length) {
+    var lightboxImg = eventLightbox.querySelector('.event-lightbox-image');
+    var lightboxClose = eventLightbox.querySelector('.event-lightbox-close');
+
+    function openLightbox(src, alt) {
+      if (!lightboxImg) return;
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      eventLightbox.classList.add('is-open');
+      eventLightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (lightboxClose) lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      eventLightbox.classList.remove('is-open');
+      eventLightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    eventImageWraps.forEach(function (wrap) {
+      wrap.setAttribute('role', 'button');
+      wrap.setAttribute('tabindex', '0');
+      wrap.setAttribute('aria-label', 'Expand image');
+      wrap.addEventListener('click', function () {
+        var img = wrap.querySelector('.event-card-image');
+        if (img && img.src) openLightbox(img.src, img.alt || '');
+      });
+      wrap.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          var img = wrap.querySelector('.event-card-image');
+          if (img && img.src) openLightbox(img.src, img.alt || '');
+        }
+      });
+    });
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener('click', closeLightbox);
+    }
+    eventLightbox.addEventListener('click', function (e) {
+      if (e.target === eventLightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && eventLightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  }
 })();
