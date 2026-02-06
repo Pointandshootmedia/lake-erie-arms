@@ -785,6 +785,114 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Winter Leagues page */
+.page-leagues .page-hero-title {
+  text-transform: lowercase;
+}
+
+.leagues-hero-intro {
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  margin: var(--space-sm) 0 0;
+  font-weight: 600;
+}
+
+.leagues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.league-card {
+  background: var(--color-surface-alt);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 0;
+  overflow: hidden;
+}
+
+.league-card-image-wrap {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.league-card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.league-card .league-card-title,
+.league-card .league-card-dates,
+.league-card .league-card-price,
+.league-card .league-card-kids,
+.league-card .league-card-details {
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.league-card .league-card-title {
+  padding-top: var(--space-md);
+}
+
+.league-card .league-card-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.25rem;
+  font-size: 0.9rem;
+  margin: var(--space-md) var(--space-lg) var(--space-lg);
+  min-width: 140px;
+}
+
+.league-card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  margin: 0 0 var(--space-sm);
+}
+
+.league-card-dates {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-xs);
+}
+
+.league-card-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 var(--space-xs);
+}
+
+.league-card-kids {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-sm);
+  line-height: 1.4;
+}
+
+.league-card-details {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin: 0 0 var(--space-md);
+  padding-left: 1.25rem;
+}
+
+.league-card-details li {
+  margin-bottom: var(--space-xs);
+}
+
+.league-card-register {
+  display: inline-block;
+  margin-top: 0;
+}
+
 .events-cta {
   margin-top: var(--space-xl);
   text-align: center;
@@ -2380,6 +2488,49 @@ a:hover {
   margin: 0 0 var(--space-md);
 }
 
+/* Policy / legal pages */
+.page-policy .page-hero-title {
+  text-transform: lowercase;
+}
+
+.policy-content .policy-h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  margin: var(--space-xl) 0 var(--space-sm);
+}
+
+.policy-content .policy-h2:first-child {
+  margin-top: 0;
+}
+
+.policy-content .policy-h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  margin: var(--space-lg) 0 var(--space-sm);
+  text-transform: uppercase;
+}
+
+.policy-list {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 var(--space-md);
+  padding-left: 1.25rem;
+}
+
+.policy-list li {
+  margin-bottom: var(--space-xs);
+}
+
+.return-policy-final {
+  color: var(--color-accent) !important;
+}
+
 .rules-list {
   color: var(--color-text-muted);
   font-size: 1.05rem;
@@ -2561,6 +2712,109 @@ a:hover {
   .customwork-services {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* Contact page */
+.page-contact .contact-hero .page-hero-title {
+  text-transform: lowercase;
+}
+
+.contact-consent {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 var(--space-lg);
+  max-width: 640px;
+}
+
+.contact-consent a {
+  color: var(--color-accent);
+}
+
+.contact-form {
+  margin-top: var(--space-md);
+}
+
+.contact-form-map-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.contact-form-col {
+  min-width: 0;
+}
+
+.contact-map-col {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-map-col .about-map-embed {
+  display: block;
+  width: 100%;
+  height: 320px;
+}
+
+@media (max-width: 768px) {
+  .contact-form-map-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.contact-hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.contact-hours-block {
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+}
+
+.contact-hours-label {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin: 0 0 var(--space-sm);
+  text-transform: uppercase;
+}
+
+.contact-hours-text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-address,
+.contact-phone-email {
+  margin: var(--space-sm) 0;
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+.contact-phone-email a {
+  color: var(--color-text);
+}
+
+.contact-phone-email a:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .contact-hours-grid {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caliber Club — Lake Erie Arms | Indoor Shooting Complex</title>
+  <title>Contact Us — Lake Erie Arms | Indoor Shooting Complex</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="caliberclub-page">
+<body>
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a href="index.html" class="logo">
@@ -100,93 +99,70 @@
     </nav>
   </header>
 
-  <main class="page-caliberclub">
-    <section class="page-hero caliberclub-hero">
-      <div class="container caliberclub-hero-inner">
-        <img src="images/CC-Full-Logo-White-Gold.png" alt="Caliber Club" class="caliberclub-hero-text">
-        <p class="caliberclub-hero-intro">The Caliber Club is a serene and exclusive space designed for members to relax, dine, and enjoy. Our club is a haven for those who appreciate a refined atmosphere coupled with culinary excellence.</p>
-        <div class="rules-buttons caliber-club-menus caliberclub-hero-menus">
-          <a href="drinks.html" class="btn-hero">Drink Menu</a>
-          <a href="documents/New+CC+Lunch+Menu.pdf" class="btn-hero" target="_blank" rel="noopener noreferrer">Lunch Menu</a>
-          <a href="documents/CC-Dinner-Menu+5.29.25.pdf" class="btn-hero" target="_blank" rel="noopener noreferrer">Dinner Menu</a>
-          <a href="documents/CC+Brunch+Menu.pdf" class="btn-hero btn-hero-outline" target="_blank" rel="noopener noreferrer">Sunday Brunch</a>
-        </div>
-      </div>
-      <a href="#caliberclub-content" class="hero-scroll-indicator" aria-label="Scroll to content">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-      </a>
-    </section>
-
-    <section id="caliberclub-content" class="range-section range-section-alt">
-      <div class="container caliberclub-hours-split">
-        <div class="rules-content">
-          <h2 class="rules-section-title"><strong>Caliber Club Hours</strong></h2>
-          <div class="cc-hours">
-            <div class="cc-hours-block">
-              <div class="cc-hours-row">
-                <span class="cc-hours-days">Mon – Thu</span>
-                <span class="cc-hours-time">11am – 9pm</span>
-              </div>
-              <p class="cc-hours-note">Kitchen closes 8pm</p>
-            </div>
-            <div class="cc-hours-block">
-              <div class="cc-hours-row">
-                <span class="cc-hours-days">Fri – Sat</span>
-                <span class="cc-hours-time">11am – 10pm</span>
-              </div>
-              <p class="cc-hours-note">Kitchen closes 9pm</p>
-            </div>
-            <div class="cc-hours-block">
-              <div class="cc-hours-row">
-                <span class="cc-hours-days">Sun</span>
-                <span class="cc-hours-time">10am – 8pm</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="caliberclub-hours-image-wrap">
-          <img src="images/Food/LEA6808-2.webp" alt="Caliber Club at Lake Erie Arms" class="range-section-image">
-        </div>
+  <main class="page-contact">
+    <section class="page-hero contact-hero">
+      <div class="container">
+        <h1 class="page-hero-title">Contact Us</h1>
+        <p class="page-hero-subtitle">We’d love to hear from you</p>
       </div>
     </section>
 
     <section class="range-section">
+      <div class="container contact-form-map-split">
+        <div class="contact-form-col rules-content">
+        <h2 class="rules-section-title">How can we help?</h2>
+        <p class="rules-intro">We’d love to hear from you and answer any questions you have. Fill out the form below or give us a call at <a href="tel:+14194338200">(419) 433-8200</a>.</p>
+        <p class="contact-consent">By providing your phone number in this contact form, you consent to receive phone calls from us regarding your inquiry or our services and products. To opt in for text notifications, text <strong>JOIN</strong> to <strong>419-664-9144</strong>. By texting JOIN, you consent to receive text communications from us. Reply <strong>STOP</strong> anytime to cancel or <strong>HELP</strong> for assistance. Message and data rates may apply. <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        <form class="customwork-form contact-form" action="#" method="post" aria-label="Contact form">
+          <div class="customwork-form-grid">
+            <div class="customwork-form-row">
+              <label for="contact-name">Name <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="name" required aria-required="true" placeholder="Your name">
+            </div>
+            <div class="customwork-form-row">
+              <label for="contact-email">Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="email" required aria-required="true" placeholder="your@email.com">
+            </div>
+            <div class="customwork-form-row customwork-form-row-full">
+              <label for="contact-phone">Phone</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="(419) 555-0000">
+            </div>
+          </div>
+          <div class="customwork-form-row customwork-form-row-full">
+            <label for="contact-message">Message <span class="required">*</span></label>
+            <textarea id="contact-message" name="message" rows="5" required aria-required="true" placeholder="How can we help?"></textarea>
+          </div>
+          <div class="customwork-form-actions">
+            <button type="submit" class="btn-hero">Send Message</button>
+          </div>
+        </form>
+        </div>
+        <div class="contact-map-col visit-us-map-wrap">
+          <iframe class="about-map-embed" src="https://www.google.com/maps?q=9572+Milan+Rd,+Milan+OH+44846&hl=en&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lake Erie Arms location map"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="range-section range-section-alt">
       <div class="container">
-        <h2 class="rules-section-title">Gallery</h2>
-        <div class="caliberclub-gallery">
-          <img src="images/Food/LEA6690.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/LEA7729-Enhanced-NR-5.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20231031-_LEA9601.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240126-_LEA2820.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240201-_LEA2893.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240208-_LEA2921.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240208-_LEA2935.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240229-_LEA3083.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240229-_LEA3109.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240229-_LEA3122.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240307-_LEA3137.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240314-_LEA3157.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240321-_LEA3202.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240321-_LEA3203.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240329-_LEA3249.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240412-_LEA0012.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240412-_LEA0021.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240418-_LEA0129.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240516-_LEA0715.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/20240516-_LEA0716.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/AHI-TUNA.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/BOURBON.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/BURGER-NIGHT.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/ELK-LOIN-CHOPS.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/FILET-MINON.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/Hot-Brown.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/MEATLOAF.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/ROASTED-DUCK.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/SearedScallops.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/Shrimp-n-Grits.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/SLIDERS.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/STEAK.webp" alt="Caliber Club" class="caliberclub-gallery-img">
-          <img src="images/Food/WagyuBurger.webp" alt="Caliber Club" class="caliberclub-gallery-img">
+        <h2 class="rules-section-title">Hours</h2>
+        <div class="contact-hours-grid">
+          <div class="contact-hours-block">
+            <h3 class="contact-hours-label">Range</h3>
+            <p class="contact-hours-text"><strong>Mon–Sun</strong> 10AM–8PM<br><strong>Members Only Mon–Sat</strong> 9AM–10AM</p>
+          </div>
+          <div class="contact-hours-block">
+            <h3 class="contact-hours-label">Retail &amp; Memberships</h3>
+            <p class="contact-hours-text"><strong>Mon–Sat</strong> 10AM–8PM<br><strong>Sundays</strong> 10AM–7PM</p>
+          </div>
+          <div class="contact-hours-block">
+            <h3 class="contact-hours-label">Café</h3>
+            <p class="contact-hours-text"><strong>Mon–Sat</strong> 9AM–7PM<br><strong>Sundays</strong> 10AM–7PM</p>
+          </div>
+          <div class="contact-hours-block">
+            <h3 class="contact-hours-label">Caliber Club</h3>
+            <p class="contact-hours-text"><strong>Mon–Thu</strong> 11AM–9PM (Kitchen closes 8pm)<br><strong>Fri–Sat</strong> 11AM–10PM (Kitchen closes 9pm)<br><strong>Sun</strong> 10AM–8PM</p>
+          </div>
         </div>
       </div>
     </section>
@@ -222,10 +198,10 @@
             <address class="footer-address">
               9572 Milan Rd,<br>
               Milan, United States<br>
-              <a href="tel:+14194084401">419-664-3471</a>
+              <a href="tel:+14194338200">419-433-8200</a>
             </address>
             <p class="footer-hours-label">Hours</p>
-            <p class="footer-hours">Mon–Sun 10am–8pm</p>
+            <p class="footer-hours">Mon 10am–8pm · Tue–Sun 10am–8pm</p>
           </div>
           <div class="footer-block">
             <h3 class="footer-heading">HOURS</h3>
@@ -237,7 +213,7 @@
           </div>
           <div class="footer-block">
             <h3 class="footer-heading">LOCATION</h3>
-            <p>9572 Milan Rd<br>Milan OH 44846<br>419-664-3471</p>
+            <p>9572 Milan Rd<br>Milan OH 44846<br><a href="tel:+14194338200">419-433-8200</a></p>
           </div>
           <div class="footer-block">
             <h3 class="footer-heading">INFO</h3>
